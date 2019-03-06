@@ -28,11 +28,35 @@ describe('<Display/>', () => {
         expect(getByText(/unlocked/i)).toBeDefined();
     });
 
-    it.skip('Should use red-led class when locked or closed', () => {
+    it('Should use red-led class when locked', () => {
+        const { getByTestId } = render(<Display locked={true} closed={true}/>);
 
+        const lockedDisplay = getByTestId('locked-display');
+
+        expect(lockedDisplay.classList.contains('red-led')).toBeTruthy();
     })
 
-    it.skip('Should use green-led class when unlocked or open', () => {
-        
+    it('Should use green-led class when unlocked', () => {
+        const { getByTestId } = render(<Display locked={false} closed={true}/>);
+
+        const lockedDisplay = getByTestId('locked-display');
+
+        expect(lockedDisplay.classList.contains('green-led')).toBeTruthy();
+    })
+
+    it('Should use red-led class when closed', () => {
+        const { getByTestId } = render(<Display locked={true} closed={true}/>);
+
+        const closedDisplay = getByTestId('closed-display');
+
+        expect(closedDisplay.classList.contains('red-led')).toBeTruthy();
+    })
+
+    it('Should use green-led class when open', () => {
+        const { getByTestId } = render(<Display locked={true} closed={false}/>);
+
+        const closedDisplay = getByTestId('closed-display');
+
+        expect(closedDisplay.classList.contains('green-led')).toBeTruthy();
     })
 });

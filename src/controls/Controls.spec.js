@@ -34,12 +34,12 @@ describe('<Controls/>', () => {
     it('Locked toggle should be disabled if gate is open', () => {
         const { getByTestId } = render(<Controls closed={false}/>)
 
-        expect(getByTestId("lock-button").disabled).toBe(true)
+        expect(getByTestId("lock-button").disabled).toBeTruthy()
     });
 
     it('Open toggle should be disabled if gate is locked', () => {
         const { getByTestId } = render(<Controls locked={true}/>)
 
-        expect(getByTestId("close-button").disabled).toBe(true)
+        expect(getByTestId("close-button").disabled).toBeTruthy()
     });
 });
