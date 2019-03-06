@@ -27,4 +27,12 @@ describe('<Display/>', () => {
 
         expect(getByText(/unlocked/i)).toBeDefined();
     });
+
+    it.skip('Should use red-led class when locked or closed', () => {
+
+    })
+
+    it.skip('Should use green-led class when unlocked or open', () => {
+        
+    })
 });
