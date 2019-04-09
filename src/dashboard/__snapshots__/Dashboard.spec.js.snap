@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dashboard/> Should match snapshot 1`] = `
+Array [
+  <div
+    className="display panel"
+  >
+    <div
+      className="led green-led"
+      data-testid="locked-display"
+    >
+      Unlocked
+    </div>
+    <div
+      className="led green-led"
+      data-testid="closed-display"
+    >
+      Open
+    </div>
+  </div>,
+  <div
+    className="controls panel"
+  >
+    <button
+      className="toggle-btn"
+      data-testid="lock-button"
+      disabled={true}
+      onClick={[Function]}
+    >
+      Lock Gate
+    </button>
+    <button
+      className="toggle-btn"
+      data-testid="close-button"
+      disabled={false}
+      onClick={[Function]}
+    >
+      Close Gate
+    </button>
+  </div>,
+]
+`;
